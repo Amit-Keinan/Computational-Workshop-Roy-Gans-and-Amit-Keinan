@@ -1,0 +1,9 @@
+TIME_POINTS = ['first_time_point', 'second_time_point']
+ROOT_PATH = '/Volumes/homes/Maya/students_study/data'
+SCANS_CATEGORIES_PREFIX = ['neutral_', 'academic_', 'social_', ''] # empty category is all category-concatenated data
+EXCLUDED = ['10', '11', '13', '17', '21', '24', '26', '27', '30', '31', '35', '39', '41', '42', '48']
+ATLAS_CIFTI_PATH = '/Volumes/homes/Maya/Atlases/schaefer_parcellation/Schaefer2018_100Parcels_7Networks_order_FSLMNI152_2mm.dtseries.nii'
+FMRI_TIMESERIES_ONE_CATEGORY = 640 # each category scan consists of 2 concatenated movies
+FMRI_TIMESERIES_ALL_CATEGORIES = 1920 # total of 6 concatenated movies across all categories
+N_VOXELS = 91282
+OUTPUT_PATH_DIR_PREFIX = '/Volumes/homes/Maya/Guests/Amit/CompSagolProj/correlation_output'
