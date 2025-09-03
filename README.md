@@ -1,0 +1,2 @@
+This repository contains code developed as part of a computational neuroscience lab workshop, focusing on fMRI data analysis and group-level comparisons.
+In the folder same vs different group analysis, the code implements an analysis of fMRI data, computing the correlation between an individual student’s neural activity and the mean neural activity of their in-group (same degree program) compared to their out-group (different degree program).
