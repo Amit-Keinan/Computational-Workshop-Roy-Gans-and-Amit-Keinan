@@ -8,4 +8,5 @@ INPUT_LENGTH = 90  # Length of the 1D correlation map input
 TRAIN_TEST_SPLIT = 0.8
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-CSV_PATH = 'friendship_data.csv'  # Path to your CSV data file
+SUBJS_CORR_DATA_CSV_PATH = './data/social_data.csv'  # Path to your CSV data file
+FRIENDSHIP_LABELS_CSV_PATH = './data/social_distances.csv'  # Path to your labels CSV file

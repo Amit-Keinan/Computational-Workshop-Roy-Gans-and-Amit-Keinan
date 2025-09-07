@@ -1,7 +1,7 @@
 import torch
 from torch import nn
 from friendship_1dcnn import Friendship1DCNN
-from cnn_corr_map_to_friendship_pred.friendship_csv_data_loader import FriendshipCSVDataLoader
+from friendship_csv_data_loader import FriendshipCSVDataLoader
 import config
 
 def train(model, train_loader, criterion, optimizer, device):
@@ -48,7 +48,7 @@ def run_trainer():
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=config.LEARNING_RATE)
 
-    data_loader = FriendshipCSVDataLoader(csv_path=config.CSV_PATH)
+    data_loader = FriendshipCSVDataLoader(x_csv_path=config.SUBJS_CORR_DATA_CSV_PATH, y_csv_path=config.FRIENDSHIP_LABELS_CSV_PATH)
     train_loader, test_loader = data_loader.get_data_loaders(batch_size=config.BATCH_SIZE, train_test_split=config.TRAIN_TEST_SPLIT)
     trained_model = train(model, train_loader, criterion, optimizer, device)
     test_acc = evaluate(trained_model, test_loader, device)

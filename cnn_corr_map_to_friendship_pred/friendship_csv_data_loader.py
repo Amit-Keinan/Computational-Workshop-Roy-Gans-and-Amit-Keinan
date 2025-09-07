@@ -6,8 +6,8 @@ from torch.utils.data import DataLoader
 from friendship_csv_dataset import FriendshipCSVDataset
 
 class FriendshipCSVDataLoader():
-    def __init__(self, csv_path, x_col_name='features', y_col_name='label'):
-       self.dataset = FriendshipCSVDataset(csv_path, x_col_name, y_col_name)
+    def __init__(self, x_csv_path, y_csv_path):
+       self.dataset = FriendshipCSVDataset(x_csv_path, y_csv_path)
 
     def get_data_loaders(self, batch_size, train_test_split):
         split_idx = int(len(self.dataset) * train_test_split)
