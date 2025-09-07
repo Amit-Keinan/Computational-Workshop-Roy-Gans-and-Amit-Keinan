@@ -44,7 +44,7 @@ def run_trainer():
     device = torch.device(config.DEVICE)
     print(f'Going to train model in {device}')
 
-    model = Friendship1DCNN(num_classes=config.NUM_CLASSES).to(device)
+    model = Friendship1DCNN(num_classes=config.NUM_CLASSES, num_input_features=config.NUM_ROIS).to(device)
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=config.LEARNING_RATE)
 
